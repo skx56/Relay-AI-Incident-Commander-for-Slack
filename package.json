@@ -1,0 +1,29 @@
+{
+  "name": "relay-slack-agent",
+  "version": "1.0.0",
+  "description": "Relay — Slack-Native Project Control Tower. A multi-agent Slack orchestrator that creates projects, routes tasks via MCP, and posts status digests.",
+  "main": "dist/app.js",
+  "scripts": {
+    "dev": "ts-node -r dotenv/config src/app.ts",
+    "start": "node -r dotenv/config dist/app.js",
+    "build": "tsc",
+    "mcp-server": "cd mcp-server && ts-node src/index.ts"
+  },
+  "keywords": ["slack", "ai", "mcp", "agent", "relay"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/genai": "^2.10.0",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@slack/bolt": "^4.7.3",
+    "dotenv": "^17.4.2",
+    "sqlite3": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.0",
+    "@types/sqlite3": "^3.1.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}

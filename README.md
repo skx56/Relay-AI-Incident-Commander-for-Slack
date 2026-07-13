@@ -25,14 +25,14 @@ graph TD
 
     User([👤 Slack User]):::slack
     
-    subgraph BoltApp [Slack Bolt App (Socket Mode)]
+    subgraph BoltApp ["Slack Bolt App (Socket Mode)"]
         Orch[⚡️ Orchestrator Agent<br/>Coordinates Workflow]:::agent
         Ctx[🔍 Context Agent<br/>Gemini Flash + Slack History]:::agent
         Router[🛣️ Router Agent<br/>Gemini Pro + Task Decomp]:::agent
         Digest[📊 Digest/Postmortem Agent<br/>Gemini Flash + Summarization]:::agent
     end
     
-    subgraph MCPServer [Custom MCP Task Server]
+    subgraph MCPServer ["Custom MCP Task Server"]
         MCP[🔌 MCP Server<br/>@modelcontextprotocol/sdk]:::tool
         SQLite[(🗄️ SQLite Database)]:::db
     end

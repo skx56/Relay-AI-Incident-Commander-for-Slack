@@ -28,7 +28,7 @@ graph TD
     subgraph BoltApp ["Slack Bolt App (Socket Mode)"]
         Orch[⚡️ Orchestrator Agent<br/>Coordinates Workflow]:::agent
         Ctx[🔍 Context Agent<br/>Gemini Flash + Slack History]:::agent
-        Router[🛣️ Router Agent<br/>Gemini Pro + Task Decomp]:::agent
+        Router[🛣️ Router Agent<br/>Gemini Flash + Task Decomp]:::agent
         Digest[📊 Digest/Postmortem Agent<br/>Gemini Flash + Summarization]:::agent
     end
     

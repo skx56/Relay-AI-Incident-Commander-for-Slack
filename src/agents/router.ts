@@ -17,7 +17,7 @@ export interface IncidentTask {
  * Router Agent
  *
  * Takes the incident description + context summaries, decomposes
- * it into 3–8 concrete, actionable response tasks using Gemini 2.5 Pro with structured
+ * it into 3–8 concrete, actionable response tasks using Gemini 2.5 Flash with structured
  * JSON output, then calls the MCP server's `create_task` tool once per task.
  */
 export async function routeTasks(

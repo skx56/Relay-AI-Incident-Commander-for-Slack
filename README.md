@@ -25,6 +25,23 @@ Relay is built around the operational reality of high-pressure incidents: contex
 
 The repository contains a TypeScript Slack application and a companion MCP server. The main app handles Slack events, routing, state, and coordination modules, while the MCP server exposes structured incident operations over a separate process boundary.
 
+## Architecture Diagram
+
+```mermaid
+flowchart TD
+  Slack["Slack Event or Command"] --> App["Slack Bolt App"]
+  App --> Router["Incident Router"]
+  Router --> Context["Context Module"]
+  Router --> Orchestrator["Orchestration Module"]
+  Router --> Digest["Status Digest Module"]
+  Router --> Postmortem["Postmortem Module"]
+  Orchestrator --> MCP["MCP Server"]
+  MCP --> Tools["Structured Incident Tools"]
+  Router --> DB["SQLite Incident Store"]
+  Digest --> Slack
+  Postmortem --> Slack
+```
+
 ## Technology Stack
 
 - Slack Bolt for event handling and app integration.

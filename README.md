@@ -28,6 +28,7 @@ The repository contains a TypeScript Slack application and a companion MCP serve
 ## Architecture Diagram
 
 ```mermaid
+%%{init: {"flowchart": {"nodeSpacing": 55, "rankSpacing": 70, "curve": "basis"}, "themeVariables": {"fontSize": "16px", "fontFamily": "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"}}}%%
 flowchart TD
   Slack["Slack Event or Command"] --> App["Slack Bolt App"]
   App --> Router["Incident Router"]
@@ -41,15 +42,15 @@ flowchart TD
   Digest --> Slack
   Postmortem --> Slack
 
-  classDef inputs fill:#FEF3C7,stroke:#D97706,color:#78350F,stroke-width:2px;
-  classDef process fill:#DBEAFE,stroke:#2563EB,color:#1E3A8A,stroke-width:2px;
-  classDef data fill:#DCFCE7,stroke:#16A34A,color:#14532D,stroke-width:2px;
-  classDef agent fill:#F3E8FF,stroke:#9333EA,color:#581C87,stroke-width:2px;
-  classDef output fill:#FFE4E6,stroke:#E11D48,color:#881337,stroke-width:2px;
+  classDef inputs fill:#FEF3C7,stroke:#D97706,color:#78350F,stroke-width:2.5px;
+  classDef process fill:#DBEAFE,stroke:#2563EB,color:#1E3A8A,stroke-width:2.5px;
+  classDef data fill:#DCFCE7,stroke:#16A34A,color:#14532D,stroke-width:2.5px;
+  classDef agent fill:#F3E8FF,stroke:#9333EA,color:#581C87,stroke-width:2.5px;
+  classDef output fill:#FFE4E6,stroke:#E11D48,color:#881337,stroke-width:2.5px;
   class Slack,App,Tools process;
   class DB data;
   class Router,Context,Orchestrator,Digest,Postmortem,MCP agent;
-  linkStyle default stroke:#64748B,stroke-width:2px;
+  linkStyle default stroke:#64748B,stroke-width:2.5px;
 ```
 
 ## Technology Stack
